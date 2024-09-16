@@ -1,5 +1,6 @@
 import React from "react";
 import { API } from "../global/API";
+import { MediaCard } from "../containers/media/MediaCard";
 
 export const Media = () => {
     const { error, isLoading, data } = API.usePopQuery();
@@ -21,11 +22,12 @@ export const Media = () => {
             {isLoading ? (
                 <h1>Loading...</h1>
             ) : (
-                <section>
-                    {data!.results.map((info) => (
-                        <aside key={info.id}>
-                            <h1>{info.title}</h1>
-                        </aside>
+                <section className="grid">
+                    {data!.results.map((media) => (
+                        <MediaCard 
+                            key={media.id} 
+                            media={media} 
+                        />
                     ))}
                 </section>
             )}

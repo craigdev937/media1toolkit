@@ -11,7 +11,7 @@ export const API = createApi({
     endpoints: (builder) => ({
         pop: builder.query<IAll, void>({
             query: () => ({
-                url: `/trending/all/day?api_key=${KEY}`,
+                url: `/trending/movie/day?api_key=${KEY}`,
                 method: "GET"
             }),
             providesTags: ["Film", "Show"]

@@ -23,6 +23,16 @@ body {
     background: var(--gray);
 }
 
+.grid {
+    width: 90%;
+    margin-inline: auto;
+    gap: 1rem;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill, 
+        minmax(220px, 1fr)
+    );
+}
 
 
 

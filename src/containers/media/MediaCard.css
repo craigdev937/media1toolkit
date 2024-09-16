@@ -1,0 +1,14 @@
+.media {
+    height: 20rem;
+    width: auto;
+    padding: .7rem;
+    background: var(--white);
+    border-radius: 10px;
+} 
+
+.media__img {
+    display: block;
+    max-width: 100%;
+}
+
+

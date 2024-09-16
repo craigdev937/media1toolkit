@@ -5,7 +5,7 @@ import { API } from "./API";
 export const RED = configureStore({
     reducer: {
         [API.reducerPath]: API.reducer,
-    },      // gDM = getDefaultMiddleare
+    },      // gDM = getDefaultMiddleware
     middleware: (gDM) => gDM().concat(API.middleware),
 });
 
