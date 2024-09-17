@@ -1,14 +1,17 @@
 .media {
-    height: 20rem;
-    width: auto;
+    height: 19rem;
+    width: 11rem;
     padding: .7rem;
     background: var(--white);
     border-radius: 10px;
+    align-items: center;
+    justify-content: center;
 } 
 
 .media__img {
     display: block;
     max-width: 100%;
+    height: auto;
 }
 
 
