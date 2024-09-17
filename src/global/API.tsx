@@ -1,6 +1,6 @@
 import { createApi, 
     fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { IAll } from "../models/Interfaces";
+import { IAll, IMovieDetail } from "../models/Interfaces";
 const KEY = process.env.API_KEY!;
 const URL = "https://api.themoviedb.org/3";
 
@@ -14,7 +14,14 @@ export const API = createApi({
                 url: `/trending/movie/week?api_key=${KEY}`,
                 method: "GET"
             }),
-            providesTags: ["Film", "Show"]
+            providesTags: ["Film"]
+        }),
+        mov: builder.query<IMovieDetail, number>({
+            query: (id: number) => ({
+                url: `/movie/${id}?api_key=${KEY}`,
+                method: "GET"
+            }),
+            providesTags: ["Film"]
         })
     })
 });

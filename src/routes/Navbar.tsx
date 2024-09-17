@@ -34,10 +34,10 @@ export const Navbar = () => {
                     "navbar__ul"}
                 >
                         <Link
-                            to={"/films"}
+                            to={"/people"}
                             className="navbar__link"
                             onClick={closeMenu}
-                            >Films
+                            >People
                         </Link>
                         <Link
                             to={"/telly"}

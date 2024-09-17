@@ -4,8 +4,9 @@ import { createBrowserRouter,
 import { NotFound } from "../components/NotFound";
 import { Navbar } from "./Navbar";
 import { Media } from "../pages/Media";
-import { Films } from "../pages/Films";
+import { People } from "../pages/People";
 import { Telly } from "../pages/Telly";
+import { MediaDetail } from "../containers/media/MediaDetail";
 
 const Router = createBrowserRouter([
     {
@@ -18,8 +19,12 @@ const Router = createBrowserRouter([
                 element: <Media />
             },
             {
-                path: "/films",
-                element: <Films />
+                path: "/film/:id",
+                element: <MediaDetail />
+            },
+            {
+                path: "/people",
+                element: <People />
             },
             {
                 path: "/telly",
