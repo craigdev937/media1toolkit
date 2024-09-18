@@ -21,7 +21,7 @@ export interface IAll {
     total_results: number
 };
 
-export interface IMediaCard {
+export interface IFilmCard {
     backdrop_path: string,
     id: number,
     title: string,
@@ -39,7 +39,7 @@ export interface IMediaCard {
     vote_count: number
 };
 
-export interface IMovieDetail {
+export interface IFilmDetail {
     adult: boolean,
     backdrop_path: string,
     belongs_to_collection: {
@@ -86,6 +86,35 @@ export interface IMovieDetail {
     vote_average: number,
     vote_count: number
 };
+
+export interface IFilmVideo {
+    id: number,
+    results: [{
+        iso_639_1: string,
+        iso_3166_1: string,
+        name: string,
+        key: string,
+        site: string,
+        size: number,
+        type: string,
+        official: boolean,
+        published_at: string,
+        id: string
+    }]
+};
+
+export interface IFilmVideoData {
+    iso_639_1: string,
+    iso_3166_1: string,
+    name: string,
+    key: string,
+    site: string,
+    size: number,
+    type: string,
+    official: boolean,
+    published_at: string,
+    id: string
+}
 
 
 

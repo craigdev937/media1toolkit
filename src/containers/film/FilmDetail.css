@@ -1,11 +1,11 @@
-.detail {
+.film__detail {
     width: 90%;
     margin-inline: auto;
 
     background: var(--white);
 }
 
-.detail img {
+.film__detail img {
     display: block;
     max-width: 100%;
     height: auto;

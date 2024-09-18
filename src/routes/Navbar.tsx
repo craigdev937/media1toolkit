@@ -21,7 +21,7 @@ export const Navbar = () => {
                     className="navbar__logo"
                     to={"/"}
                 >
-                    Media                
+                    Film                
                 </Link>
                 <aside 
                     className="navbar__icon"

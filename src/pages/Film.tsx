@@ -1,8 +1,8 @@
 import React from "react";
 import { API } from "../global/API";
-import { MediaCard } from "../containers/media/MediaCard";
+import { FilmCard } from "../containers/film/FilmCard";
 
-export const Media = () => {
+export const Film = () => {
     const { error, isLoading, data } = API.usePopQuery();
     console.log(data);
 
@@ -23,10 +23,10 @@ export const Media = () => {
                 <h1>Loading...</h1>
             ) : (
                 <section className="grid">
-                    {data!.results.map((media) => (
-                        <MediaCard 
-                            key={media.id} 
-                            media={media} 
+                    {data!.results.map((film) => (
+                        <FilmCard 
+                            key={film.id} 
+                            film={film} 
                         />
                     ))}
                 </section>
