@@ -10,20 +10,15 @@ type PEO = {
 export const PeopleCard = ({people}: PEO) => {
     return (
         <section className="people">
-            <img 
-                className="people__img"
-                alt={people.original_name} 
-                src={`${IMG}/${people.profile_path}`} 
-            />
             <h1>{people.original_name}</h1>
-            {/* <Link to={`/film/${film.id}`}>
+            <Link to={`/people/${people.id}`}>
                 <img 
-                    className="film__img"
-                    alt={film.title}
-                    src={`${IMG}/${film.poster_path}`}  
+                    className="people__img"
+                    alt={people.original_name} 
+                    src={`${IMG}/${people.profile_path}`} 
                 />
-                <h4>{film.title}</h4>
-            </Link> */}
+                <h4>{people.original_name}</h4>
+            </Link>
         </section>
     );
 };

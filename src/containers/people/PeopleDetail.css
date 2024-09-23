@@ -1,0 +1,15 @@
+.people {
+    background: var(--white);
+    height: 40rem;
+    width: 25rem;
+    display: flexbox;
+}
+
+.people__img {
+    height: 25rem;
+    width: auto;
+}
+
+.people__bio {
+    font-size: 1.5rem;
+}

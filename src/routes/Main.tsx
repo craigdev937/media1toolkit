@@ -5,6 +5,7 @@ import { NotFound } from "../components/NotFound";
 import { Navbar } from "./Navbar";
 import { Film } from "../pages/Film";
 import { People } from "../pages/People";
+import { PeopleDetail } from "../containers/people/PeopleDetail";
 import { TV } from "../pages/TV";
 import { FilmDetail } from "../containers/film/FilmDetail";
 import { FilmVideo } from "../containers/film/FilmVideo";
@@ -30,6 +31,10 @@ const Router = createBrowserRouter([
             {
                 path: "/people",
                 element: <People />
+            },
+            {
+                path: "/people/:id",
+                element: <PeopleDetail />
             },
             {
                 path: "/tv",

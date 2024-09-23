@@ -6,6 +6,8 @@ export const People = () => {
     const { error, isLoading, data } = 
         API.usePeoQuery();
 
+    console.log(data);
+
     if (error) {
         if ("status" in error) {
             const errMSG = "error" in error ?
