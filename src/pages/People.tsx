@@ -1,10 +1,36 @@
 import React from "react";
+import { API } from "../global/API";
+import { PeopleCard } from "../containers/people/PeopleCard";
 
 export const People = () => {
+    const { error, isLoading, data } = 
+        API.usePeoQuery();
+
+    if (error) {
+        if ("status" in error) {
+            const errMSG = "error" in error ?
+                error.error :
+                JSON.stringify(error.data);
+            return <h1>Error: {errMSG}</h1>;
+        } else {
+            return <h1>Error: {error.message}</h1>
+        }
+    };
+
     return (
         <React.Fragment>
-            <h1>People</h1>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vitae, consequatur sit. Fugiat cum consequatur eligendi, rerum aut incidunt atque? Dolore numquam corrupti sint recusandae reiciendis voluptatibus quam saepe consequatur? Doloribus.</p>
+            {isLoading ? (
+                <h1>Loading...</h1>
+            ) : (
+                <section className="people__grid">
+                    {data!.results.map((people) => (
+                        <PeopleCard 
+                            key={people.id} 
+                            people={people} 
+                        />
+                    ))}
+                </section>
+            )}
         </React.Fragment>
     );
 };

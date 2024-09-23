@@ -34,5 +34,16 @@ body {
     );
 }
 
+.people__grid {
+    width: 90%;
+    margin-inline: auto;
+    gap: 2rem;
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fill,
+        minmax(250px, 1fr)
+    );
+}
+
 
 

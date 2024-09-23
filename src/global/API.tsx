@@ -1,6 +1,7 @@
 import { createApi, 
     fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { IAll, IFilmDetail, IFilmVideo } from "../models/Interfaces";
+import { IAll, IFilmDetail, 
+    IFilmVideo, IPeople } from "../models/Interfaces";
 const KEY = process.env.API_KEY || "";
 const URL = "https://api.themoviedb.org/3";
 
@@ -30,13 +31,14 @@ export const API = createApi({
             }),
             providesTags: ["Film"]
         }),
-        peo: builder.query({
+        peo: builder.query<IPeople, void>({
             query: () => ({
-                url: ``,
+                url: `/trending/person/day?api_key=${KEY}`,
                 method: "GET"
             })
         })
     })
 });
+
 
 

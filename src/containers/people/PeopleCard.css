@@ -1,0 +1,17 @@
+.people {
+    height: 22rem;
+    width: 14rem;
+    padding: 1rem;
+    background: var(--white);
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+} 
+
+.people__img {
+    display: block;
+    width: 12rem;
+    height: 18rem;
+}
+
+
