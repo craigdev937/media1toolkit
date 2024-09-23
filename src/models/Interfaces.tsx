@@ -114,7 +114,74 @@ export interface IFilmVideoData {
     official: boolean,
     published_at: string,
     id: string
-}
+};
+
+export interface IPeople {
+    page: number,
+    results: [{
+        id: number,
+        original_name: string,
+        media_type: string,
+        adult: boolean,
+        popularity: number,
+        gender: number,
+        known_for_department: string,
+        profile_path: string,
+        known_for: [{
+            backdrop_path: string,
+            id: number,
+            title: string,
+            name: string,
+            original_title: string,
+            original_name: string,
+            overview: string,
+            poster_path: string,
+            media_type: string,
+            adult: boolean,
+            original_language: string,
+            genre_ids: number[],
+            popularity: number,
+            release_date: string,
+            first_air_date: string,
+            video: boolean,
+            vote_average: number,
+            vote_count: number,
+            origin_country: string[]
+        }]
+    }]
+};
+
+export interface IPeopleDetail {
+    id: number,
+    original_name: string,
+    media_type: string,
+    adult: boolean,
+    popularity: number,
+    gender: number,
+    known_for_department: string,
+    profile_path: string,
+    known_for: [{
+        backdrop_path: string,
+        id: number,
+        title: string,
+        name: string,
+        original_title: string,
+        original_name: string,
+        overview: string,
+        poster_path: string,
+        media_type: string,
+        adult: boolean,
+        original_language: string,
+        genre_ids: number[],
+        popularity: number,
+        release_date: string,
+        first_air_date: string,
+        video: boolean,
+        vote_average: number,
+        vote_count: number,
+        origin_country: string[]
+    }]
+};
 
 
 

@@ -13,7 +13,7 @@ export const Spinner = () => {
                 to be loaded, did 
                 you see the Spinner?`
             );
-        }, 3000)
+        })
     }, []);
 
     return (

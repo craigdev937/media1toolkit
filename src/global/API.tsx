@@ -23,12 +23,18 @@ export const API = createApi({
             }),
             providesTags: ["Film"]
         }),
-        vid: builder.query<IFilmVideo, number>({
+        fvid: builder.query<IFilmVideo, number>({
             query: (id: number) => ({
                 url: `/movie/${id}/videos?api_key=${KEY}`,
                 method: "GET"
             }),
             providesTags: ["Film"]
+        }),
+        peo: builder.query({
+            query: () => ({
+                url: ``,
+                method: "GET"
+            })
         })
     })
 });

@@ -5,7 +5,7 @@ import { NotFound } from "../components/NotFound";
 import { Navbar } from "./Navbar";
 import { Film } from "../pages/Film";
 import { People } from "../pages/People";
-import { Telly } from "../pages/Telly";
+import { TV } from "../pages/TV";
 import { FilmDetail } from "../containers/film/FilmDetail";
 import { FilmVideo } from "../containers/film/FilmVideo";
 
@@ -32,8 +32,8 @@ const Router = createBrowserRouter([
                 element: <People />
             },
             {
-                path: "/telly",
-                element: <Telly />
+                path: "/tv",
+                element: <TV />
             }
         ]
     }

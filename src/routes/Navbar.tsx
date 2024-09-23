@@ -40,10 +40,10 @@ export const Navbar = () => {
                             >People
                         </Link>
                         <Link
-                            to={"/telly"}
+                            to={"/tv"}
                             className="navbar__link"
                             onClick={closeMenu}
-                            >Telly
+                            >TV
                         </Link>
                 </ul>
             </nav>
